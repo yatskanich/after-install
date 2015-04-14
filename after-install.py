@@ -42,6 +42,9 @@ def change_apache_user(user_name):
 if __name__ == "__main__":
     install('commands.txt')
 
+    with open('/etc/apache2/apache2.conf', 'a') as apache_conf:
+        apache_conf.write("ServerName localhost")
+
     ss = input('Generate SSH key (y/n):')
     if ss == 'y':
         ssh_generator()

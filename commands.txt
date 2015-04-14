@@ -17,6 +17,8 @@ sudo apt-get install git
 git config --global color.branch auto
 git config --global color.diff auto
 git config --global color.status auto
+git config --global user.name "Oleksandr Yatskanich"
+git config --global user.email "yatskanich.sasha@gmail.com"
 
 #apache2 install
 sudo apt-get install apache2
@@ -43,9 +45,14 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
 #PostgreSQL
-sudo apt-get install postgresql postgresql-contrib
-sudo apt-get install php5-pgsql
-sudo apt-get install pgadmin3
+#sudo apt-get install postgresql postgresql-contrib
+#sudo apt-get install php5-pgsql
+#sudo apt-get install pgadmin3
+
+#sun java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
 
 #other
 sudo apt-get install xclip
