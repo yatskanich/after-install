@@ -34,6 +34,7 @@ sudo apt-get install phpmyadmin
 sudo apt-get install python-software-properties
 sudo apt-get install npm
 sudo npm install -g less
+sudo ln -s /usr/bin/nodejs /usr/bin/node
 sudo npm install -g grunt-cli
 sudo npm install -g bower
 sudo npm install -g gulp
