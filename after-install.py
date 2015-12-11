@@ -55,7 +55,23 @@ def make_www_in_home(user_name):
 
 
 if __name__ == "__main__":
+        install('commands.txt')
+
+    ss = input('Generate SSH key (y/n):')
+    if ss == 'y':
+        ssh_generator()
+
+    ch = input('Install other soft (y/n):')
+    if ch == 'y':
+        install_soft()
+
     user_name = getpass.getuser()
+    mess = 'Run apache with current user {0} (y/n):'.format(user_name)
+
+    uc = input(mess)
+    if uc == 'y':
+        change_apache_user(user_name)
+    
     mess = 'Make www dir in {username} home folder? (y/n):'.format(username=user_name)
     user_choice = input(mess)
     if user_choice == 'y':
