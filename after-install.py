@@ -55,7 +55,7 @@ def make_www_in_home(user_name):
 
 
 if __name__ == "__main__":
-        install('commands.txt')
+    install('commands.txt')
 
     ss = input('Generate SSH key (y/n):')
     if ss == 'y':
