@@ -38,6 +38,7 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 sudo npm install -g grunt-cli
 sudo npm install -g bower
 sudo npm install -g gulp
+npm install -g less-plugin-clean-css
 
 #composer global install
 curl -sS https://getcomposer.org/installer | php
