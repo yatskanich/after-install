@@ -43,7 +43,7 @@ def change_apache_user(user_name):
 def make_www_in_home(user_name):
     os.system('sudo cp /etc/apache2/apache2.conf /tmp/apache_conf.tmp')
 
-    with open('/tmp/apache_conf.tmp', 'a') as new_apache_conf:
+    with open('/tmp/apache_conf.tmp', 'wt') as new_apache_conf:
         conf = '<Directory /home/{username}/www/>\n'.format(username=user_name)
         conf += '\tOptions Indexes FollowSymLinks\n'
         conf += '\tAllowOverride All\n'

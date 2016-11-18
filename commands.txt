@@ -3,12 +3,12 @@ sudo apt-get update
 sudo apt-get upgrade
 
 #php install
-sudo apt-get install php7-cli php7-common php-apc php-pear php7-xdebug php7-curl php7 php7-dev
-sudo apt-get install php7-xsl
-sudo apt-get install php7-intl
-sudo apt-get install mcrypt php7-mcrypt
-sudo php7enmod mcrypt
-sudo apt-get install php7-gd
+sudo apt-get install php7.0-cli php7.0-common php-apc php-pear php7.0-xdebug php7.0-curl php7.0 php7.0-dev
+sudo apt-get install php7.0-xsl
+sudo apt-get install php7.0-intl
+sudo apt-get install mcrypt php7.0-mcrypt
+sudo php7.0enmod mcrypt
+sudo apt-get install php7.0-gd
 
 sudo apt-get install curl
 
@@ -23,11 +23,11 @@ git config --global user.email "yatskanich.sasha@gmail.com"
 #apache2 install
 sudo apt-get install apache2
 sudo a2enmod rewrite
-sudo apt-get install libapache2-mod-php7
+sudo apt-get install libapache2-mod-php7.0
 
 #mysql
 sudo apt-get install mysql-server
-sudo apt-get install php7-mysql
+sudo apt-get install php7.0-mysql
 sudo apt-get install phpmyadmin
 
 #node, bower....
