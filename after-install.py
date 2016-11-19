@@ -41,17 +41,20 @@ def change_apache_user(user_name):
 
 
 def make_www_in_home(user_name):
-    os.system('sudo cp /etc/apache2/apache2.conf /tmp/apache_conf.tmp')
+    os.system("mkdir /home/{username}/www/".format(username=user_name))
 
-    with open('/tmp/apache_conf.tmp', 'wt') as new_apache_conf:
-        conf = '<Directory /home/{username}/www/>\n'.format(username=user_name)
+    os.system('cp /etc/apache2/apache2.conf /home/{username}/apache_conf.tmp'.format(username=user_name))
+
+    with open('/home/{username}/apache_conf.tmp'.format(username=user_name), 'a') as new_apache_conf:
+        conf = '<Directory /home/{username}/www2/>\n'.format(username=user_name)
         conf += '\tOptions Indexes FollowSymLinks\n'
         conf += '\tAllowOverride All\n'
         conf += '\tRequire all granted\n'
-        conf += '</Directory>'
+        conf += '</Directory>\n\n'
+        conf += 'ServerName localhost'
         new_apache_conf.write(conf)
 
-    os.system('sudo mv /tmp/apache_conf.tmp /etc/apache2/apache2.conf')
+    os.system('sudo mv /home/{username}/apache_conf.tmp /etc/apache2/apache2.conf'.format(username=user_name))
 
 
 if __name__ == "__main__":

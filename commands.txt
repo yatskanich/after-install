@@ -3,11 +3,12 @@ sudo apt-get update
 sudo apt-get upgrade
 
 #php install
-sudo apt-get install php7.0-cli php7.0-common php-apc php-pear php7.0-xdebug php7.0-curl php7.0 php7.0-dev
+sudo apt-get install php7.0-cli php7.0-common php-pear php7.0-xdebug php7.0-curl php7.0 php7.0-dev
+#sudo apt-get install php-apc
 sudo apt-get install php7.0-xsl
 sudo apt-get install php7.0-intl
 sudo apt-get install mcrypt php7.0-mcrypt
-sudo php7.0enmod mcrypt
+#sudo php7.0enmod mcrypt
 sudo apt-get install php7.0-gd
 
 sudo apt-get install curl
@@ -38,7 +39,7 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 sudo npm install -g grunt-cli
 sudo npm install -g bower
 sudo npm install -g gulp
-npm install -g less-plugin-clean-css
+sudo npm install -g less-plugin-clean-css
 
 #composer global install
 curl -sS https://getcomposer.org/installer | php
