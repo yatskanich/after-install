@@ -57,6 +57,18 @@ def make_www_in_home(user_name):
     os.system('sudo mv /home/{username}/apache_conf.tmp /etc/apache2/apache2.conf'.format(username=user_name))
 
 
+def change_sql_mode(user_name):
+    os.system('cp /etc/mysql/my.cnf /home/{username}/mysql_conf.tmp'.format(username=user_name))
+
+    with open('/home/{username}/mysql_conf.tmp'.format(username=user_name), 'a') as new_mysql_conf:
+        data = '[mysqld]'
+        data += "sql_mode=''"
+        new_mysql_conf.write(data)
+
+    os.system('sudo mv /home/{username}/mysql_conf.tmp /etc/mysql/my.cnf'.format(username=user_name))
+
+    os.system('sudo service mysql restart')
+
 if __name__ == "__main__":
     install('commands.txt')
 
@@ -79,3 +91,8 @@ if __name__ == "__main__":
     user_choice = input(mess)
     if user_choice == 'y':
         make_www_in_home(user_name)
+
+    mess = 'Set sql mode to null? (y/n):'
+    user_choice = input(mess)
+    if user_choice == 'y':
+        change_sql_mode(user_name)
