@@ -62,7 +62,7 @@ def change_sql_mode(user_name):
 
     with open('/home/{username}/mysql_conf.tmp'.format(username=user_name), 'a') as new_mysql_conf:
         data = '[mysqld]'
-        data += "sql_mode=''"
+        data += "sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
         new_mysql_conf.write(data)
 
     os.system('sudo mv /home/{username}/mysql_conf.tmp /etc/mysql/my.cnf'.format(username=user_name))
