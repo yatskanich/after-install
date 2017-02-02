@@ -61,8 +61,8 @@ def change_sql_mode(user_name):
     os.system('cp /etc/mysql/my.cnf /home/{username}/mysql_conf.tmp'.format(username=user_name))
 
     with open('/home/{username}/mysql_conf.tmp'.format(username=user_name), 'a') as new_mysql_conf:
-        data = '[mysqld]'
-        data += "sql_mode=STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+        data = "[mysqld]\n"
+        data += "sql_mode='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'"
         new_mysql_conf.write(data)
 
     os.system('sudo mv /home/{username}/mysql_conf.tmp /etc/mysql/my.cnf'.format(username=user_name))
