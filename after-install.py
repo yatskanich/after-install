@@ -67,7 +67,7 @@ def change_sql_mode(user_name):
 
     os.system('sudo mv /home/{username}/mysql_conf.tmp /etc/mysql/my.cnf'.format(username=user_name))
 
-    os.system('sudo service mysql restart')
+    os.system('sudo systemctl restart mysql')
 
 if __name__ == "__main__":
     install('commands.txt')
