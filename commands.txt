@@ -8,10 +8,8 @@ sudo apt-get install php7.1-cli php7.1-common php-pear php7.1-xdebug php7.1-curl
 sudo apt-get install php7.1-xsl
 sudo apt-get install php7.1-intl
 sudo apt-get install mcrypt php7.0-mcrypt
-#sudo php7.0enmod mcrypt
+#sudo php7.1enmod mcrypt
 sudo apt-get install php7.1-gd
-
-sudo apt-get install curl
 
 sudo apt-get install php-curl
 
@@ -26,7 +24,7 @@ git config --global user.email "yatskanich.sasha@gmail.com"
 #apache2 install
 sudo apt-get install apache2
 sudo a2enmod rewrite
-sudo apt-get install libapache2-mod-php1.0
+sudo apt-get install libapache2-mod-php7.1
 
 #mysql
 sudo apt-get install mysql-server
