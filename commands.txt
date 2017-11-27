@@ -1,6 +1,6 @@
 #update system
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt update
+sudo apt upgrade
 
 #php install
 sudo apt install php7.1-cli php7.1-common php-pear php7.1-xdebug php7.1-curl php7.1 php7.1-dev
