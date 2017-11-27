@@ -3,16 +3,16 @@ sudo apt-get update
 sudo apt-get upgrade
 
 #php install
-sudo apt-get install php7.1-cli php7.1-common php-pear php7.1-xdebug php7.1-curl php7.1 php7.1-dev
-sudo apt-get install php7.1-xsl
-sudo apt-get install php7.1-intl
-sudo apt-get install mcrypt php7.1-mcrypt
-sudo apt-get install php7.1-gd
+sudo apt install php7.1-cli php7.1-common php-pear php7.1-xdebug php7.1-curl php7.1 php7.1-dev
+sudo apt install php7.1-xsl
+sudo apt install php7.1-intl
+sudo apt install mcrypt php7.1-mcrypt
+sudo apt install php7.1-gd
 
-sudo apt-get install php-curl
+sudo apt install curl
 
 #git install & config
-sudo apt-get install git
+sudo apt install git
 git config --global color.branch auto
 git config --global color.diff auto
 git config --global color.status auto
@@ -20,18 +20,18 @@ git config --global user.name "Oleksandr Yatskanich"
 git config --global user.email "yatskanich.sasha@gmail.com"
 
 #apache2 install
-sudo apt-get install apache2
+sudo apt install apache2
 sudo a2enmod rewrite
-sudo apt-get install libapache2-mod-php7.1
+sudo apt install libapache2-mod-php7.1
 
 #mysql
-sudo apt-get install mysql-server
-sudo apt-get install php7.1-mysql
-sudo apt-get install phpmyadmin
+sudo apt install mysql-server
+sudo apt install php7.1-mysql
+sudo apt install phpmyadmin
 
 #node, bower....
-sudo apt-get install python-software-properties
-sudo apt-get install npm
+sudo apt install python-software-properties
+sudo apt install npm
 sudo npm install -g less
 #sudo ln -s /usr/bin/nodejs /usr/bin/node
 #sudo npm install -g grunt-cli
@@ -45,6 +45,6 @@ sudo mv composer.phar /usr/local/bin/composer
 
 #sun java
 sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer
+sudo apt update
+sudo apt install oracle-java8-installer
 
