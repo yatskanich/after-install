@@ -3,7 +3,7 @@ sudo apt update
 sudo apt upgrade
 
 #php install
-sudo apt install php7.2-cli php7.2-common php-pear php7.2-xdebug php7.2-curl php7.1 php7.2-dev
+sudo apt install php7.2-cli php7.2-common php-pear php7.2-xdebug php7.2-curl php7.2 php7.2-dev
 sudo apt install php7.2-xsl
 sudo apt install php7.2-intl
 sudo apt install mcrypt php7.2-mcrypt
@@ -44,7 +44,7 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
 #sun java
-#sudo add-apt-repository ppa:webupd8team/java
-#sudo apt update
-#sudo apt install oracle-java8-installer
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update
+sudo apt install oracle-java8-installer
 
