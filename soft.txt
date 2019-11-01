@@ -1,9 +1,5 @@
 #soft list
-sudo apt-get install filezilla
-sudo apt-get install mc
+#sudo apt-get install filezilla
+#sudo apt-get install mc
 sudo apt-get install htop
 sudo apt-get install mysql-workbench
-
-#for Yii2
-#composer global require "fxp/composer-asset-plugin:^1.2.0"
-
