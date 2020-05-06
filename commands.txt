@@ -3,11 +3,11 @@ sudo apt update
 sudo apt upgrade
 
 #php install
-sudo apt install php7.3-cli php7.3-common php-pear php7.3-xdebug php7.3-curl php7.3 php7.3-dev
-sudo apt install php7.3-xsl
-sudo apt install php7.3-intl
-sudo apt install mcrypt
-sudo apt install php7.3-gd
+sudo apt install php7.4-cli php7.4-common php-pear php7.4-xdebug php7.4-curl php7.4 php7.4-dev
+sudo apt install php-xsl
+sudo apt install php-intl
+sudo apt install php-mcrypt
+sudo apt install php-gd
 
 sudo apt install curl
 
@@ -22,17 +22,16 @@ git config --global user.email "yatskanich.sasha@gmail.com"
 #apache2 install
 sudo apt install apache2
 sudo a2enmod rewrite
-sudo apt install libapache2-mod-php7.3
+sudo apt install libapache2-mod-php7.4
 
 #mysql
 sudo apt install mysql-server
-sudo apt install php7.3-mysql
-#sudo apt install phpmyadmin
+sudo apt install php7.4-mysql
 
 #node, bower....
 sudo apt install npm
 sudo npm install -g less
-sudo npm install -g bower
+#sudo npm install -g bower
 #sudo npm install -g gulp
 
 #composer global install
@@ -41,4 +40,4 @@ sudo mv composer.phar /usr/local/bin/composer
 
 #sun java
 sudo add-apt-repository ppa:linuxuprising/java
-sudo apt install oracle-java13-set-default
+sudo apt install oracle-java14-set-default
