@@ -62,7 +62,15 @@ def change_sql_mode(user_name):
 
     with open('/home/{username}/mysql_conf.tmp'.format(username=user_name), 'a') as new_mysql_conf:
         data = "[mysqld]\n"
-        data += "sql_mode='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'"
+        data += "sql_mode='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'"
+        data += "skip-character-set-client-handshake\n"
+        data += "character-set-server = utf8\n"
+        data += "init-connect='SET NAMES utf8'\n"
+        data += "collation-server=utf8_general_ci\n"
+        data += "[client]\n"
+        data += "default-character-set=utf8\n"
+        data += "[mysqldump]\n"
+        data += "default-character-set=utf8"
         new_mysql_conf.write(data)
 
     os.system('sudo mv /home/{username}/mysql_conf.tmp /etc/mysql/my.cnf'.format(username=user_name))
