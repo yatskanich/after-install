@@ -2,4 +2,4 @@
 #sudo apt-get install filezilla
 #sudo apt-get install mc
 sudo apt-get install htop
-sudo apt-get install mysql-workbench
+#sudo apt-get install mysql-workbench
