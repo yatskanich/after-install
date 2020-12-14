@@ -64,6 +64,7 @@ def change_sql_mode(user_name):
         data = "[mysqld]\n"
         data += "sql_mode='STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'\n"
         data += "skip-character-set-client-handshake\n"
+        data += "sort_buffer_size = 256M\n"
         data += "character-set-server = utf8\n"
         data += "init-connect='SET NAMES utf8'\n"
         data += "collation-server=utf8_general_ci\n"
